@@ -23,7 +23,7 @@ class SPDRankSVM(object):
             pair_y = (ys[first_ind], ys[second_ind])
             if pair_y[0] > pair_y[1]:
                 y_diff = 1
-            elif pair_y[0] < pair_y[1]:
+            elif pair_y[1] > pair_y[0]:
                 y_diff = -1
             else:
                 # 評価値が同じときは重みを更新しない
